@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIWES Dashboard</title>
+    <style>
+        :root {
+            /* These variables will be updated by theme.js */
+            --primary-color: #000000; 
+            --accent-color: #cccccc;
+        }
+        body { margin: 0; font-family: monospace; display: flex; height: 100vh; }
+        
+        /* Sidebar uses the dynamic primary color */
+        .sidebar { width: 200px; background-color: var(--primary-color); color: #fff; padding: 20px; }
+        .sidebar h3 { color: var(--accent-color); }
+        
+        .main-content { padding: 40px; flex: 1; }
+        .card { border: 2px solid var(--primary-color); padding: 20px; width: 300px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>SIWES Portal</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li>Logbooks</li>
+            <li>Profile</li>
+            <li>Settings</li>
+            <li><a href="login.html" style="color: #fff;">Logout</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h2 id="school-name">Welcome, Student</h2>
+        <div class="card">
+            <p>Status: Active</p>
+            <p>Weeks Completed: 0/12</p>
+        </div>
+    </div>
+    
+    <script src="theme.js"></script>
+</body>
+</html>
